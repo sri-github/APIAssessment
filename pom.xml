@@ -28,6 +28,12 @@
             <version>2.10.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>7.14.0</version> <!-- Use the version matching your cucumber-java -->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

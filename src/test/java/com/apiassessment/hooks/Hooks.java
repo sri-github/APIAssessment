@@ -1,4 +1,4 @@
-package com.apiassessment.hooks;
+package com.apiassessment.steps;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
@@ -6,12 +6,16 @@ import io.cucumber.java.After;
 public class Hooks {
 
     @Before
-    public void setUp() {
-        // TODO: Setup code before each scenario
+    public void beforeScenario() {
+        // Code to run before each scenario
+        System.out.println("Starting scenario...");
+        // e.g., initialize test data or reset state
     }
 
     @After
-    public void tearDown() {
-        // TODO: Cleanup code after each scenario
+    public void afterScenario() {
+        // Code to run after each scenario
+        System.out.println("Finished scenario.");
+        // e.g., clean up resources or reset environment
     }
 }
