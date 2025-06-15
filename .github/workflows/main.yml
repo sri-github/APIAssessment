@@ -2,9 +2,9 @@ name: Run Books API Tests
 
 on:
   push:
-    branches: [ apiautomation ]
+    branches: [ main, apiautomation ]
   pull_request:
-    branches: [ apiautomation ]
+    branches: [ main, apiautomation ]
 jobs:
   test:
     runs-on: ubuntu-latest
