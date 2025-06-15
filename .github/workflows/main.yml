@@ -21,3 +21,9 @@ jobs:
 
       - name: Build with Maven and run tests
         run:  mvn test -Dtest=TestRunner
+
+      - name: Upload Cucumber HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: target/cucumber-reports/index.html
