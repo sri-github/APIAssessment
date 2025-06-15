@@ -13,8 +13,13 @@ import io.cucumber.datatable.DataTable;
 
 public class BooksSteps {
 
+    private final TestContext context;
     private static final String BASE_URL = "http://simple-books-api.glitch.me";
     private Response response;
+
+    public BooksSteps(TestContext context) {
+        this.context = context;
+    }
 
     @Given("I have access to the Books API")
     public void i_have_access_to_the_books_api() {
@@ -28,6 +33,7 @@ public class BooksSteps {
                 .baseUri(BASE_URL)
                 .when()
                 .get(endpoint);
+        context.setResponse(response);
     }
 
     @Then("the response status code should be {int}")
